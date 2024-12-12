@@ -1,0 +1,144 @@
+%%%%%%%%%%%%%%%% PLANTILLA TAREAS UNAM-FC %%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                      
+%%%  Gael Emiliano Arreguín Salgado  %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper, 12pt]{article} % Doc. tipo artículo
+\usepackage[spanish]{babel} % Idioma Español
+\usepackage[utf8]{inputenc} % Codificación UTF-8
+\usepackage[T1]{fontenc} % Soporte para caracteres especiales
+\decimalpoint % Establece el punto como separador decimal
+
+%---- Configuración general ----%
+\usepackage{geometry} % Márgenes personalizados
+\geometry{margin=2.5cm}
+\usepackage{parskip} % Espacio entre párrafos
+\usepackage{setspace} % Espacio de líneas
+\setstretch{1.15}
+
+%---- Paquetes para gráficos y tablas ----%
+\usepackage{graphicx} % Incluir imágenes
+\usepackage{float} % Control de posición de figuras
+\usepackage{booktabs} % Tablas elegantes
+\usepackage{multirow} % Filas combinadas en tablas
+\usepackage{array} % Columnas personalizadas
+\usepackage{siunitx} % Manejo de unidades SI
+
+%---- Paquetes para matemáticas ----%
+\usepackage{amsmath} % Ecuaciones avanzadas
+\usepackage{amssymb} % Símbolos matemáticos
+\usepackage{amsthm} % Ambientes teoremas
+\usepackage{mathtools} % Complemento a "amsmath"
+\usepackage{cancel} % Cancelar términos en ecuaciones
+\usepackage{bm} % Letras en negritas para matemáticas
+
+%---- Paquetes para código ----%
+\usepackage{listings} % Formato de código
+\usepackage{xcolor} % Colores para código
+% Colores %
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% Estilo del código %
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+%---- Miscelaneos ----%
+\usepackage[hidelinks]{hyperref} % Hipervínculos
+\usepackage{enumitem} % Listas personalizadas
+\usepackage{fancyhdr} % Encabezados y pies de página
+\usepackage{lastpage} % Para calcular núm. total de págs.
+\usepackage{titlesec} % Secciones personalizadas
+\usepackage{tcolorbox} % Cajas de texto y resaltado
+\usepackage{epstopdf} % Soporte para EPS
+\usepackage{wrapfig} % Figuras con texto alrededor
+\usepackage{tikz} % Diagramas y gráficos vectoriales
+
+%---- Comandos nuevos  ----%
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+
+%---- Estilo del documento  ----%
+\pagestyle{fancy}
+\fancyhf{} % Limpiar encabezados y pies
+\renewcommand{\headrulewidth}{0.5pt} % Línea negra encabezado
+\fancyhead[L]{\textit{Gael Emiliano}} % Nombre en el encabezado (lado izq.)
+\rfoot{\textit{Página \thepage \hspace{1pt} de \pageref{LastPage}}}
+
+%---- Personalización de la portada ----%
+\newcommand{\makecoverpage}[5]{
+  \begin{titlepage}
+    \begin{center}
+      {\includegraphics[width=1\textwidth]{UNAM_FCLogo}\par}
+      \vspace{1cm}
+      {\bfseries \huge Universidad Nacional Autónoma de México \par}
+      \vspace{2cm}
+      {\scshape \huge Facultad de Ciencias \par}
+      \vspace{2cm}
+      {\scshape \huge #1 \par} % Título de la tarea
+      \vspace{2cm}
+      {\scshape \large #2 \par} % Nombre de la asignatura
+      \vfill
+      {\scshape \large Semestre: #3 \par}
+      \vspace{1.5cm}
+      {\large Fecha de entrega: #4 \par}
+      \vspace{1.5cm}
+      {\large Autor: #5 \par}
+      \vfill
+    \end{center}
+  \end{titlepage}
+}
+
+%%%%%%% PRINCIPIO %%%%%%%
+
+\begin{document}
+
+%---- Crea la portada ----%
+\makecoverpage{TareaX}
+              {Asignatura}              
+              {2025-1}              
+              {12 de Diciembre de 2024}              
+              {Gael Emiliano Arreguín Salgado}
+
+%---- Inicio del documento ----%
+\tableofcontents % Índice
+\newpage
+
+\section{Introducción}
+Aquí comienza el contenido de tu tarea.
+
+\section{Desarrollo}
+Escribe el desarrollo de tu tarea aquí.
+
+\subsection{Parte intermedia del desarrollo}
+Una parte intermedia...
+
+\section{Conclusión}
+Escribe tu conclusión.
+
+\section{Referencias}
+Cita tus fuentes de consulta.
+
+\end{document}
+
+%%%%%%%%%% FIN %%%%%%%%%%
